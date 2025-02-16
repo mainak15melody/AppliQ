@@ -14,18 +14,24 @@
   <header id="header">
     <nav class="container">
       <div class="logo">
-        <a href="#">AppliQ</a>
+        <a href="#">
+          <span class="logo-text">AppliQ</span>
+        </a>
       </div>
       <ul class="nav-links">
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="nav-controls">
+        <button id="toggle-dark-mode" aria-label="Toggle Dark Mode">🌙</button>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </nav>
   </header>
@@ -35,7 +41,7 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>Welcome to AppliQ</h1>
-      <p class="tagline">Expert Appliance Repair & Sales in Kolkata</p>
+      <p class="tagline"><span id="typed"></span></p>
       <a href="#services" class="btn">Discover Our Services</a>
     </div>
   </section>
@@ -46,8 +52,8 @@
       <h2>About Us</h2>
       <p>
         At AppliQ, we provide top-notch repair and maintenance services for all types of home appliances.
-        Located at Moulana Azad Road, West Hidaypur, Kolkata 700127, Barasat, West Bengal 700127, our team is
-        committed to quality and customer satisfaction.
+        Located at Moulana Azad Road, West Hidaypur, Kolkata 700127, our team is dedicated to quality,
+        innovation, and customer satisfaction.
       </p>
     </div>
   </section>
@@ -59,23 +65,44 @@
       <div class="services-grid">
         <div class="service-item">
           <h3>Refrigerator Repair</h3>
-          <p>Efficient repair for all refrigerator models.</p>
+          <p>Efficient repairs for all refrigerator models with precision and care.</p>
         </div>
         <div class="service-item">
           <h3>Washing Machine Repair</h3>
-          <p>Professional service to get your washing machine running again.</p>
+          <p>Get your washing machine back in top shape—fast and reliable.</p>
         </div>
         <div class="service-item">
           <h3>Air Conditioner Repair</h3>
-          <p>Expert repair services for AC units, ensuring a cool summer.</p>
+          <p>Expert repairs to keep you cool, even on the hottest days.</p>
         </div>
         <div class="service-item">
           <h3>Microwave Oven Repair</h3>
-          <p>Reliable repair and maintenance for your microwave ovens.</p>
+          <p>Swift and accurate maintenance for your kitchen essentials.</p>
         </div>
         <div class="service-item">
           <h3>TV & Home Theater Setup</h3>
-          <p>Seamless setup of your home entertainment systems.</p>
+          <p>Modern, seamless setups for an immersive entertainment experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <h2>Testimonials</h2>
+      <div class="testimonial-slider">
+        <div class="testimonial active">
+          <p>"Great service and quick repair! Highly recommended for anyone seeking quality."</p>
+          <h3>- Customer 1</h3>
+        </div>
+        <div class="testimonial">
+          <p>"Professional, reliable, and friendly. My appliance works like new again!"</p>
+          <h3>- Customer 2</h3>
+        </div>
+        <div class="testimonial">
+          <p>"I was impressed with their attention to detail and commitment to customer care."</p>
+          <h3>- Customer 3</h3>
         </div>
       </div>
     </div>
@@ -87,7 +114,10 @@
       <h2>Contact Us</h2>
       <div class="contact-info">
         <p><strong>Phone:</strong> <a href="tel:08584874220">08584874220</a></p>
-        <p><strong>Address:</strong> Moulana Azad Road, West Hidaypur, Kolkata 700127, Barasat, West Bengal 700127</p>
+        <p><strong>Address:</strong> Moulana Azad Road, West Hidaypur, Kolkata 700127</p>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.428845600358!2d88.37682611503372!3d22.57052458513845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02750751c5e3a5%3A0xbfe4e5d88b6b2e78!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1681234567890" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
       <form id="contactForm">
         <input type="text" id="name" placeholder="Your Name" required />
@@ -98,10 +128,13 @@
     </div>
   </section>
 
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" aria-label="Scroll to Top">↑</button>
+
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>© 2023 AppliQ. All rights reserved.</p>
+      <p>© 2025 AppliQ. All rights reserved.</p>
     </div>
   </footer>
 
