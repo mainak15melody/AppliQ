@@ -9,6 +9,11 @@ body {
   line-height: 1.6;
   color: #333;
   background: #fff;
+  transition: background 0.3s, color 0.3s;
+}
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
 }
 .container {
   width: 90%;
@@ -22,10 +27,13 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   transition: background 0.3s;
+}
+body.dark-mode header {
+  background: rgba(18, 18, 18, 0.95);
 }
 nav {
   display: flex;
@@ -33,12 +41,22 @@ nav {
   align-items: center;
   padding: 1rem 0;
 }
-nav .logo a {
+
+/* Enhanced Logo Branding */
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.logo-text {
   font-size: 1.8rem;
   font-weight: 600;
-  text-decoration: none;
-  color: #333;
+  background: linear-gradient(45deg, #ff6600, #e65c00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
+/* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -46,7 +64,7 @@ nav .logo a {
 }
 .nav-links li a {
   text-decoration: none;
-  color: #333;
+  color: inherit;
   font-weight: 500;
   transition: color 0.3s;
 }
@@ -54,7 +72,15 @@ nav .logo a {
   color: #ff6600;
 }
 
-/* Mobile Menu Toggle */
+/* Dark Mode Toggle & Mobile Menu */
+#toggle-dark-mode {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: inherit;
+  margin-right: 1rem;
+}
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -63,9 +89,13 @@ nav .logo a {
 .menu-toggle span {
   height: 3px;
   width: 25px;
-  background: #333;
+  background: currentColor;
   margin-bottom: 4px;
   border-radius: 2px;
+}
+.nav-controls {
+  display: flex;
+  align-items: center;
 }
 
 /* Hero Section */
@@ -73,11 +103,13 @@ nav .logo a {
   position: relative;
   height: 100vh;
   background: url('https://images.unsplash.com/photo-1585508882185-741be44c6ef6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #fff;
+  overflow: hidden;
 }
 .hero-overlay {
   position: absolute;
@@ -95,14 +127,18 @@ nav .logo a {
   animation: fadeIn 1s ease-out;
 }
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
 }
 .hero-content .tagline {
   font-size: 1.5rem;
   margin-bottom: 2rem;
   font-weight: 300;
+  min-height: 40px;
 }
+
+/* Buttons */
 .btn {
   display: inline-block;
   background: #ff6600;
@@ -129,8 +165,11 @@ nav .logo a {
 }
 .section h2 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: inherit;
   position: relative;
 }
 .section h2::after {
@@ -145,8 +184,11 @@ nav .logo a {
   max-width: 800px;
   margin: 0 auto 2rem auto;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: #666;
+}
+body.dark-mode .section p {
+  color: #aaa;
 }
 
 /* Services Grid */
@@ -161,15 +203,55 @@ nav .logo a {
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+body.dark-mode .service-item {
+  background: #1e1e1e;
+  color: #e0e0e0;
 }
 .service-item:hover {
   transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 .service-item h3 {
   margin-bottom: 1rem;
-  font-size: 1.4rem;
-  color: #333;
+  font-size: 1.5rem;
+  color: inherit;
+}
+
+/* Testimonials Slider */
+#testimonials .testimonial-slider {
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 150px;
+}
+.testimonial {
+  min-height: 120px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.testimonial.active {
+  opacity: 1;
+  position: relative;
+}
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #555;
+}
+body.dark-mode .testimonial p {
+  color: #ccc;
+}
+.testimonial h3 {
+  font-weight: 600;
+  color: inherit;
 }
 
 /* Contact Section */
@@ -201,6 +283,29 @@ nav .logo a {
 #contact form button:hover {
   background: #e65c00;
 }
+.map-container {
+  margin: 2rem 0;
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: none;
+  z-index: 1000;
+  transition: background 0.3s;
+}
+#scrollTopBtn:hover {
+  background: #e65c00;
+}
 
 /* Footer */
 footer {
@@ -228,12 +333,15 @@ footer {
   .nav-links {
     display: none;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     position: absolute;
     top: 60px;
     right: 0;
     width: 200px;
     box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  body.dark-mode .nav-links {
+    background: rgba(18, 18, 18, 0.95);
   }
   .nav-links li {
     padding: 1rem;
