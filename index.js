@@ -25,21 +25,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Sticky Header Background Change on Scroll
+  // Sticky Header & Scroll-to-Top Button
   const header = document.getElementById('header');
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
+    header.classList.toggle('scrolled', window.scrollY > 50);
+    scrollTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+
+  // Scroll-to-Top Button Click
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
   // Intersection Observer for Section Animations
   const sections = document.querySelectorAll('.section');
-  const options = {
-    threshold: 0.1
-  };
+  const observerOptions = { threshold: 0.1 };
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -47,10 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.unobserve(entry.target);
       }
     });
-  }, options);
-  sections.forEach(section => {
-    observer.observe(section);
-  });
+  }, observerOptions);
+  sections.forEach(section => observer.observe(section));
 
   // Contact Form Submission
   const contactForm = document.getElementById('contactForm');
@@ -64,9 +63,81 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('Please fill in all fields.');
       return;
     }
-
-    // Simulate form submission (you can integrate with a backend later)
+    // Simulate form submission (backend integration can be added)
     alert(`Thank you, ${name}! Your message has been sent.`);
     contactForm.reset();
   });
+
+  // Typed Text Effect in Hero Section (Revised)
+  const typedElement = document.getElementById('typed');
+  const phrases = [
+    "Expert Appliance Repair",
+    "Reliable Sales & Service",
+    "Quality You Can Trust"
+  ];
+  let phraseIndex = 0;
+  let letterIndex = 0;
+  let isDeleting = false;
+  
+  function type() {
+    const currentPhrase = phrases[phraseIndex];
+    
+    if (!isDeleting) {
+      // Typing effect
+      if (letterIndex < currentPhrase.length) {
+        typedElement.textContent = currentPhrase.substring(0, letterIndex + 1);
+        letterIndex++;
+        setTimeout(type, 100);
+      } else {
+        // Pause at end of word
+        isDeleting = true;
+        setTimeout(type, 1500);
+      }
+    } else {
+      // Deleting effect
+      if (letterIndex > 0) {
+        typedElement.textContent = currentPhrase.substring(0, letterIndex - 1);
+        letterIndex--;
+        setTimeout(type, 50);
+      } else {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        setTimeout(type, 100);
+      }
+    }
+  }
+  type();
+
+  // Testimonial Slider
+  const testimonials = document.querySelectorAll('.testimonial');
+  let testimonialIndex = 0;
+  function showTestimonial(index) {
+    testimonials.forEach((testimonial, i) => {
+      testimonial.classList.toggle('active', i === index);
+    });
+  }
+  setInterval(() => {
+    testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+    showTestimonial(testimonialIndex);
+  }, 5000);
+
+  // Dark Mode Toggle
+  const toggleDarkModeBtn = document.getElementById('toggle-dark-mode');
+  toggleDarkModeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    if (document.body.classList.contains('dark-mode')) {
+      localStorage.setItem('theme', 'dark');
+      toggleDarkModeBtn.textContent = "☀️";
+    } else {
+      localStorage.setItem('theme', 'light');
+      toggleDarkModeBtn.textContent = "🌙";
+    }
+  });
+  // Load saved theme on page load
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    toggleDarkModeBtn.textContent = "☀️";
+  } else {
+    toggleDarkModeBtn.textContent = "🌙";
+  }
 });
