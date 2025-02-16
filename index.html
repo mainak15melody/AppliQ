@@ -1,24 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AppliQ - Website Under Development</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AppliQ - Home Appliance Repair & Sales</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-    <div class="container">
-        <div class="content">
-            <h1>Welcome to AppliQ</h1>
-            <h2>Our Website is Under Development</h2>
-            <p>We are working hard to bring you something awesome. Stay tuned!</p>
-            <div class="loader">
-                <span></span><span></span><span></span>
-            </div>
-            <p class="footer">© 2025 AppliQ. All Rights Reserved.</p>
-        </div>
+  <!-- Navigation -->
+  <header id="header">
+    <nav class="container">
+      <div class="logo">
+        <a href="#">AppliQ</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Welcome to AppliQ</h1>
+      <p class="tagline">Expert Appliance Repair & Sales in Kolkata</p>
+      <a href="#services" class="btn">Discover Our Services</a>
     </div>
-    <script src="script.js"></script>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>
+        At AppliQ, we provide top-notch repair and maintenance services for all types of home appliances.
+        Located at Moulana Azad Road, West Hidaypur, Kolkata 700127, Barasat, West Bengal 700127, our team is
+        committed to quality and customer satisfaction.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-item">
+          <h3>Refrigerator Repair</h3>
+          <p>Efficient repair for all refrigerator models.</p>
+        </div>
+        <div class="service-item">
+          <h3>Washing Machine Repair</h3>
+          <p>Professional service to get your washing machine running again.</p>
+        </div>
+        <div class="service-item">
+          <h3>Air Conditioner Repair</h3>
+          <p>Expert repair services for AC units, ensuring a cool summer.</p>
+        </div>
+        <div class="service-item">
+          <h3>Microwave Oven Repair</h3>
+          <p>Reliable repair and maintenance for your microwave ovens.</p>
+        </div>
+        <div class="service-item">
+          <h3>TV & Home Theater Setup</h3>
+          <p>Seamless setup of your home entertainment systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-info">
+        <p><strong>Phone:</strong> <a href="tel:08584874220">08584874220</a></p>
+        <p><strong>Address:</strong> Moulana Azad Road, West Hidaypur, Kolkata 700127, Barasat, West Bengal 700127</p>
+      </div>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2023 AppliQ. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="index.js"></script>
 </body>
 </html>
