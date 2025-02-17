@@ -3,94 +3,193 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AppliQ - Professional home appliance repair and sales services in Kolkata" />
   <title>AppliQ - Home Appliance Repair & Sales</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css">
-  <script src="index.js"></script>
- <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="index.css" />
+  
+  <!-- Preload hero video for better performance -->
+  <link rel="preload" href="vecteezy_opening-microwave-oven-door-using-kitchen-appliance_55420237.mp4" as="video" type="video/mp4">
 </head>
-<style></style>
 <body>
   <!-- Navigation -->
   <header id="header">
     <nav class="container">
       <div class="logo">
-        <a href="#">
-          <span class="logo-text">AppliQ</span>
+        <a href="#" aria-label="AppliQ Home">
+          <span class="logo-text">Appli<span class="accent">Q</span></span>
         </a>
       </div>
-      <ul class="nav-links">
+      
+      <ul class="nav-links" id="nav-menu">
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li class="mobile-cta"><a href="tel:08584874220" class="phone-btn"><i class="fas fa-phone"></i> Call Now</a></li>
       </ul>
+      
       <div class="nav-controls">
-        <button id="toggle-dark-mode" aria-label="Toggle Dark Mode">🌙</button>
-        <div class="menu-toggle">
+        <a href="tel:08584874220" class="phone-btn desktop-only" aria-label="Call Us"><i class="fas fa-phone"></i></a>
+        <button id="toggle-dark-mode" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="nav-menu">
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
       </div>
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section with Video Background -->
   <section id="hero">
     <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Welcome to AppliQ</h1>
+    <div class="hero-content container">
+      <h1>Expert Appliance <span class="accent">Repair & Sales</span></h1>
       <p class="tagline"><span id="typed"></span></p>
-      <a href="#services" class="btn">Discover Our Services</a>
-      <video autoplay loop muted>
-        <source src="vecteezy_opening-microwave-oven-door-using-kitchen-appliance_55420237.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+      <div class="hero-cta">
+        <a href="#services" class="btn btn-primary">Our Services</a>
+        <a href="#contact" class="btn btn-secondary">Get a Quote</a>
+      </div>
     </div>
-    
+    <video autoplay loop muted playsinline poster="poster-image.jpg">
+      <source src="vecteezy_opening-microwave-oven-door-using-kitchen-appliance_55420237.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <!-- Features Section (New) -->
+  <section id="features" class="section">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-item">
+          <i class="fas fa-tools feature-icon"></i>
+          <h3>Expert Repairs</h3>
+          <p>Quick diagnosis and professional repairs</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-shield-alt feature-icon"></i>
+          <h3>Warranty</h3>
+          <p>All repairs come with 90-day warranty</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-truck feature-icon"></i>
+          <h3>Same-Day Service</h3>
+          <p>Available for emergencies</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-tag feature-icon"></i>
+          <h3>Best Prices</h3>
+          <p>Competitive and transparent pricing</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- About Section -->
   <section id="about" class="section">
     <div class="container">
-      <h2>About Us</h2>
-      <p>
-        At AppliQ, we provide top-notch repair and maintenance services for all types of home appliances.
-        Located at Moulana Azad Road, West Hidaypur, Kolkata 700127, our team is dedicated to quality,
-        innovation, and customer satisfaction.
-      </p>
+      <div class="section-header">
+        <h2>About <span class="accent">Us</span></h2>
+        <div class="separator"></div>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            At <strong>AppliQ</strong>, we provide top-notch repair and maintenance services for all types of home appliances.
+            Located at Moulana Azad Road, West Hidaypur, Kolkata 700127, our team of certified technicians is dedicated to quality,
+            innovation, and customer satisfaction.
+          </p>
+          <p>
+            With over 10 years of experience, we've built a reputation for reliable service, fair pricing, and lasting repairs.
+            We understand that when appliances break down, your daily routine is disrupted - that's why we offer fast, efficient solutions.
+          </p>
+          <a href="#contact" class="btn btn-primary">Contact Us</a>
+        </div>
+        <div class="about-image">
+          <img src="about-image.jpg" alt="AppliQ technician repairing appliance" loading="lazy">
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Services Section -->
   <section id="services" class="section">
     <div class="container">
-      <h2>Our Services</h2>
+      <div class="section-header">
+        <h2>Our <span class="accent">Services</span></h2>
+        <div class="separator"></div>
+      </div>
       <div class="services-grid">
         <div class="service-item">
+          <div class="service-icon">
+            <i class="fas fa-temperature-low"></i>
+          </div>
           <h3>Refrigerator Repair</h3>
           <p>Efficient repairs for all refrigerator models with precision and care.</p>
+          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="service-item">
+          <div class="service-icon">
+            <i class="fas fa-tshirt"></i>
+          </div>
           <h3>Washing Machine Repair</h3>
           <p>Get your washing machine back in top shape—fast and reliable.</p>
+          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="service-item">
+          <div class="service-icon">
+            <i class="fas fa-wind"></i>
+          </div>
           <h3>Air Conditioner Repair</h3>
           <p>Expert repairs to keep you cool, even on the hottest days.</p>
+          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="service-item">
+          <div class="service-icon">
+            <i class="fas fa-microwave"></i>
+          </div>
           <h3>Microwave Oven Repair</h3>
           <p>Swift and accurate maintenance for your kitchen essentials.</p>
+          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="service-item">
+          <div class="service-icon">
+            <i class="fas fa-tv"></i>
+          </div>
           <h3>TV & Home Theater Setup</h3>
           <p>Modern, seamless setups for an immersive entertainment experience.</p>
+          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
+        <div class="service-item">
+          <div class="service-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <h3>New Appliances</h3>
+          <p>Quality home appliances at competitive prices with installation services.</p>
+          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section (New) -->
+  <section id="cta" class="section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Need emergency repairs?</h2>
+        <p>We offer same-day service for critical breakdowns</p>
+        <a href="tel:08584874220" class="btn btn-primary"><i class="fas fa-phone"></i> Call Now: 08584874220</a>
       </div>
     </div>
   </section>
@@ -98,20 +197,77 @@
   <!-- Testimonials Section -->
   <section id="testimonials" class="section">
     <div class="container">
-      <h2>Testimonials</h2>
-      <div class="testimonial-slider">
+      <div class="section-header">
+        <h2>Our <span class="accent">Customers</span> Love Us</h2>
+        <div class="separator"></div>
+      </div>
+      <div class="testimonial-slider" id="testimonialSlider">
         <div class="testimonial active">
-          <p>"Great service and quick repair! Highly recommended for anyone seeking quality."</p>
-          <h3>- Customer 1</h3>
+          <div class="testimonial-content">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p>"Great service and quick repair! The technician arrived on time and fixed my refrigerator in under an hour. Highly recommended for anyone seeking quality service."</p>
+            <div class="testimonial-author">
+              <img src="customer1.jpg" alt="Customer 1" class="author-image" loading="lazy">
+              <div class="author-info">
+                <h3>Rahul Sharma</h3>
+                <p>Salt Lake, Kolkata</p>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="testimonial">
-          <p>"Professional, reliable, and friendly. My appliance works like new again!"</p>
-          <h3>- Customer 2</h3>
+          <div class="testimonial-content">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p>"Professional, reliable, and friendly. My washing machine was making strange noises, and they fixed it completely. My appliance works like new again!"</p>
+            <div class="testimonial-author">
+              <img src="customer2.jpg" alt="Customer 2" class="author-image" loading="lazy">
+              <div class="author-info">
+                <h3>Priya Patel</h3>
+                <p>Park Street, Kolkata</p>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="testimonial">
-          <p>"I was impressed with their attention to detail and commitment to customer care."</p>
-          <h3>- Customer 3</h3>
+          <div class="testimonial-content">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>"I was impressed with their attention to detail and commitment to customer care. They took the time to explain the issue with my AC and provided maintenance tips."</p>
+            <div class="testimonial-author">
+              <img src="customer3.jpg" alt="Customer 3" class="author-image" loading="lazy">
+              <div class="author-info">
+                <h3>Amit Kumar</h3>
+                <p>Dumdum, Kolkata</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="testimonial-controls">
+        <button id="prevTestimonial" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+        <div class="testimonial-indicators">
+          <span class="indicator active"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+        </div>
+        <button id="nextTestimonial" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
       </div>
     </div>
   </section>
@@ -119,34 +275,137 @@
   <!-- Contact Section -->
   <section id="contact" class="section">
     <div class="container">
-      <h2>Contact Us</h2>
-      <div class="contact-info">
-        <p><strong>Phone:</strong> <a href="tel:08584874220">08584874220</a></p>
-        <p><strong>Address:</strong> Moulana Azad Road, West Hidaypur, Kolkata 700127</p>
+      <div class="section-header">
+        <h2>Contact <span class="accent">Us</span></h2>
+        <div class="separator"></div>
       </div>
-      <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.428845600358!2d88.37682611503372!3d22.57052458513845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02750751c5e3a5%3A0xbfe4e5d88b6b2e78!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1681234567890" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Our Location</h3>
+              <p>Moulana Azad Road, West Hidaypur, Kolkata 700127</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Phone Number</h3>
+              <p><a href="tel:08584874220">08584874220</a></p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Business Hours</h3>
+              <p>Monday to Saturday: 9:00 AM - 8:00 PM</p>
+              <p>Sunday: 10:00 AM - 4:00 PM</p>
+            </div>
+          </div>
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.428845600358!2d88.37682611503372!3d22.57052458513845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02750751c5e3a5%3A0xbfe4e5d88b6b2e78!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1681234567890" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="contact-form-container">
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" placeholder="Enter your email" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Your Phone</label>
+              <input type="tel" id="phone" placeholder="Enter your phone number" />
+            </div>
+            <div class="form-group">
+              <label for="service">Service Needed</label>
+              <select id="service" required>
+                <option value="">Select a service</option>
+                <option value="refrigerator">Refrigerator Repair</option>
+                <option value="washing-machine">Washing Machine Repair</option>
+                <option value="ac">Air Conditioner Repair</option>
+                <option value="microwave">Microwave Repair</option>
+                <option value="tv">TV & Home Theater</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" rows="5" placeholder="Tell us about your appliance issue" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
       </div>
-      <form id="contactForm">
-        <input type="text" id="name" placeholder="Your Name" required />
-        <input type="email" id="email" placeholder="Your Email" required />
-        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
     </div>
   </section>
 
   <!-- Scroll to Top Button -->
-  <button id="scrollTopBtn" aria-label="Scroll to Top">↑</button>
+  <button id="scrollTopBtn" aria-label="Scroll to Top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
 
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>© 2025 AppliQ. All rights reserved.</p>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-text">Appli<span class="accent">Q</span></span>
+          <p>Your trusted partner for all appliance needs</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-services">
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="#services">Refrigerator Repair</a></li>
+            <li><a href="#services">Washing Machine Repair</a></li>
+            <li><a href="#services">AC Repair</a></li>
+            <li><a href="#services">Microwave Repair</a></li>
+            <li><a href="#services">TV & Home Theater</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Moulana Azad Road, West Hidaypur, Kolkata 700127</p>
+          <p><i class="fas fa-phone"></i> <a href="tel:08584874220">08584874220</a></p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 AppliQ. All rights reserved.</p>
+        <p>Designed with <i class="fas fa-heart"></i> in Kolkata</p>
+      </div>
     </div>
   </footer>
 
   <!-- JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
   <script src="index.js"></script>
 </body>
 </html>
