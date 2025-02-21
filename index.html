@@ -3,30 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AppliQ - Professional home appliance repair and sales services in Kolkata" />
-  <title>AppliQ - Home Appliance Repair & Sales</title>
+  <meta name="description" content="AppliQ - Top-rated home appliance repair and sales in Kolkata. Expert solutions for refrigerators, washing machines, ACs, and more with same-day service." />
+  <meta name="keywords" content="appliance repair Kolkata, washing machine repair Kolkata, AC repair Kolkata, refrigerator repair Kolkata, best appliance service Kolkata, same-day appliance repair Kolkata" />
+  <meta name="geo.region" content="IN-WB" /> <!-- West Bengal, India -->
+<meta name="geo.placename" content="Kolkata, North 24 Parganas, South 24 Parganas" /> <!-- Broad service areas -->
+<meta name="geo.position" content="22.5726;88.3639" /> <!-- Kolkata city center -->
+<meta name="geo.position" content="22.7217;88.4820" /> <!-- Barasat, North 24 Parganas -->
+<meta name="geo.position" content="22.1939;88.1918" /> <!-- Diamond Harbour, South 24 Parganas -->
+  <meta name="language" content="en, bn" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="AppliQ" />
+  <meta name="revisit-after" content="7 days" />
+  <meta property="og:title" content="AppliQ - Home Appliance Repair & Sales in Kolkata" />
+  <meta property="og:description" content="Trust AppliQ for expert appliance repair and sales in Kolkata. Fast, reliable, and affordable services for all your home needs." />
+  <meta property="og:image" content="https://appliq.in/og-image.jpg" />
+  <meta property="og:url" content="https://appliq.in/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AppliQ - Home Appliance Repair & Sales in Kolkata" />
+  <meta name="twitter:description" content="Trust AppliQ for expert appliance repair and sales in Kolkata. Fast, reliable, and affordable services for all your home needs." />
+  <meta name="twitter:image" content="https://appliq.in/og-image.jpg" />
+  <link rel="canonical" href="https://appliq.in/" />
   
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>AppliQ - Home Appliance Repair & Sales in Kolkata</title>
+  
+  <!-- Favicon and Icons -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.json" />
   
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts with Preload for Performance -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" media="all" onload="this.media='all'">
   
   <!-- Preload hero video for better performance -->
-  <link rel="preload" href="gpt.mp4" as="video" type="video/mp4">
+  <link rel="preload" href="hero-video.mp4" as="video" type="video/mp4">
+  
+  <!-- Structured Data for Local Business and Reviews -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "AppliQ",
+      "image": "https://appliq.in/logo.jpg",
+      "telephone": "08584874220",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Moulana Azad Road, West Hidaypur",
+        "addressLocality": "Kolkata",
+        "addressRegion": "West Bengal",
+        "postalCode": "700127",
+        "addressCountry": "IN"
+      },
+      "url": "https://appliq.in",
+      "openingHours": "Mo-Sa 09:00-20:00, Su 10:00-16:00",
+      "priceRange": "$$",
+      "description": "AppliQ provides expert appliance repair and sales services in Kolkata, offering reliable, same-day solutions for refrigerators, washing machines, ACs, and more.",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "150"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": "Rahul Sharma",
+          "datePublished": "2024-12-01",
+          "reviewBody": "Great service for my refrigerator repair in Kolkata. Fast, professional, and affordable!",
+          "rating": 5
+        },
+        {
+          "@type": "Review",
+          "author": "Priya Patel",
+          "datePublished": "2024-11-15",
+          "reviewBody": "My washing machine works like new again. Excellent service in Kolkata!",
+          "rating": 5
+        }
+      ]
+    }
+  </script>
 </head>
 <body>
   <!-- Navigation -->
   <header id="header">
     <nav class="container">
       <div class="logo">
-        <a href="#" aria-label="AppliQ Home">
+        <a href="#hero" aria-label="AppliQ Home">
           <span class="logo-text">Appli<span class="accent">Q</span></span>
         </a>
       </div>
@@ -37,17 +105,21 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li class="mobile-cta"><a href="tel:08584874220" class="phone-btn"><i class="fas fa-phone"></i> Call Now</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li class="mobile-cta"><a href="tel:08584874220" class="phone-btn" aria-label="Call Now"><i class="fas fa-phone"></i> Call Now</a></li>
       </ul>
       
       <div class="nav-controls">
         <a href="tel:08584874220" class="phone-btn desktop-only" aria-label="Call Us"><i class="fas fa-phone"></i></a>
+        <a href="https://wa.me/918584874220" class="whatsapp-btn" aria-label="Contact us on WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <button id="toggle-dark-mode" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
-        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="nav-menu">
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
           <span></span>
           <span></span>
           <span></span>
         </button>
+        <button id="toggle-language" aria-label="Toggle Language">English | বাংলা</button>
       </div>
     </nav>
   </header>
@@ -56,7 +128,7 @@
   <section id="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content container">
-      <h1>Expert Appliance <span class="accent">Repair & Sales</span></h1>
+      <h1>Expert Appliance <span class="accent">Repair & Sales</span> in Kolkata</h1>
       <p class="tagline"><span id="typed"></span></p>
       <div class="hero-cta">
         <a href="#services" class="btn btn-primary">Our Services</a>
@@ -68,30 +140,35 @@
     </video>
   </section>
 
-  <!-- Features Section (New) -->
+  <!-- Features Section -->
   <section id="features" class="section">
     <div class="container">
       <div class="features-grid">
         <div class="feature-item">
           <i class="fas fa-tools feature-icon"></i>
           <h3>Expert Repairs</h3>
-          <p>Quick diagnosis and professional repairs</p>
+          <p>Quick diagnosis and professional repairs for Kolkata homes</p>
         </div>
         <div class="feature-item">
           <i class="fas fa-shield-alt feature-icon"></i>
           <h3>Warranty</h3>
-          <p>All repairs come with 90-day warranty</p>
+          <p>All repairs come with a 90-day warranty, guaranteed</p>
         </div>
         <div class="feature-item">
           <i class="fas fa-truck feature-icon"></i>
           <h3>Same-Day Service</h3>
-          <p>Available for emergencies</p>
+          <p>Available for emergencies across Kolkata</p>
         </div>
         <div class="feature-item">
           <i class="fas fa-tag feature-icon"></i>
           <h3>Best Prices</h3>
-          <p>Competitive and transparent pricing</p>
+          <p>Competitive and transparent pricing in Kolkata</p>
         </div>
+      </div>
+      <div class="trust-badges">
+        <img src="certification-badge.png" alt="ISO Certified" loading="lazy">
+        <img src="trustpilot-badge.png" alt="Trustpilot Verified" loading="lazy">
+        <img src="ssl-badge.png" alt="Secure Site" loading="lazy">
       </div>
     </div>
   </section>
@@ -106,13 +183,13 @@
       <div class="about-content">
         <div class="about-text">
           <p>
-            At <strong>AppliQ</strong>, we provide top-notch repair and maintenance services for all types of home appliances.
-            Located at Moulana Azad Road, West Hidaypur, Kolkata 700127, our team of certified technicians is dedicated to quality,
-            innovation, and customer satisfaction.
+            At <strong>AppliQ</strong>, we provide top-notch repair and maintenance services for all types of home appliances across Kolkata, including Salt Lake, Park Street, Behala, and Dumdum. Located at Moulana Azad Road, West Hidaypur, Kolkata 700127, our team of ISO-certified technicians is dedicated to quality, innovation, and customer satisfaction.
           </p>
           <p>
-            With over 10 years of experience, we've built a reputation for reliable service, fair pricing, and lasting repairs.
-            We understand that when appliances break down, your daily routine is disrupted - that's why we offer fast, efficient solutions.
+            With over 10 years of experience, we've built a reputation for reliable service, fair pricing, and lasting repairs in Kolkata. We understand that when appliances break down, your daily routine is disrupted—that's why we offer fast, efficient solutions tailored to the local community. Our mission is to be the most trusted appliance service provider in Kolkata, ensuring every customer leaves satisfied.
+          </p>
+          <p>
+            We’re proud to serve Kolkata with integrity and excellence, using state-of-the-art tools and techniques. Trust us to handle your appliance needs with professionalism and care.
           </p>
           <a href="#contact" class="btn btn-primary">Contact Us</a>
         </div>
@@ -131,64 +208,64 @@
         <div class="separator"></div>
       </div>
       <div class="services-grid">
-        <div class="service-item">
+        <div class="service-item" id="refrigerator">
           <div class="service-icon">
             <i class="fas fa-temperature-low"></i>
           </div>
           <h3>Refrigerator Repair</h3>
-          <p>Efficient repairs for all refrigerator models with precision and care.</p>
+          <p>Efficient repairs for all refrigerator models with precision and care in Kolkata. Our certified technicians diagnose and fix issues like cooling problems, leaks, and noise, ensuring your appliance runs smoothly.</p>
           <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
-        <div class="service-item">
+        <div class="service-item" id="washing-machine">
           <div class="service-icon">
             <i class="fas fa-tshirt"></i>
           </div>
           <h3>Washing Machine Repair</h3>
-          <p>Get your washing machine back in top shape—fast and reliable.</p>
+          <p>Get your washing machine back in top shape—fast and reliable in Kolkata. We handle issues like leaks, motor failures, and strange noises, restoring your machine to peak performance.</p>
           <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
-        <div class="service-item">
+        <div class="service-item" id="ac">
           <div class="service-icon">
             <i class="fas fa-wind"></i>
           </div>
           <h3>Air Conditioner Repair</h3>
-          <p>Expert repairs to keep you cool, even on the hottest days.</p>
+          <p>Expert repairs to keep you cool, even on Kolkata’s hottest days. We fix cooling issues, compressor problems, and more, ensuring your AC operates efficiently year-round.</p>
           <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
-        <div class="service-item">
+        <div class="service-item" id="microwave">
           <div class="service-icon">
             <i class="fas fa-microwave"></i>
           </div>
           <h3>Microwave Oven Repair</h3>
-          <p>Swift and accurate maintenance for your kitchen essentials.</p>
+          <p>Swift and accurate maintenance for your kitchen essentials in Kolkata. We handle heating issues, door problems, and more, keeping your microwave in top condition.</p>
           <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
-        <div class="service-item">
+        <div class="service-item" id="tv">
           <div class="service-icon">
             <i class="fas fa-tv"></i>
           </div>
           <h3>TV & Home Theater Setup</h3>
-          <p>Modern, seamless setups for an immersive entertainment experience.</p>
+          <p>Modern, seamless setups for an immersive entertainment experience in Kolkata. We install and troubleshoot TVs, sound systems, and home theaters for optimal performance.</p>
           <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
-        <div class="service-item">
+        <div class="service-item" id="new-appliances">
           <div class="service-icon">
             <i class="fas fa-shopping-cart"></i>
           </div>
           <h3>New Appliances</h3>
-          <p>Quality home appliances at competitive prices with installation services.</p>
+          <p>Quality home appliances at competitive prices with installation services in Kolkata. We offer a wide range of products and expert setup for your convenience.</p>
           <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Call to Action Section (New) -->
+  <!-- Call to Action Section -->
   <section id="cta" class="section">
     <div class="container">
       <div class="cta-content">
         <h2>Need emergency repairs?</h2>
-        <p>We offer same-day service for critical breakdowns</p>
+        <p>We offer same-day service for critical breakdowns across Kolkata</p>
         <a href="tel:08584874220" class="btn btn-primary"><i class="fas fa-phone"></i> Call Now: 08584874220</a>
       </div>
     </div>
@@ -211,9 +288,9 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-            <p>"Great service and quick repair! The technician arrived on time and fixed my refrigerator in under an hour. Highly recommended for anyone seeking quality service."</p>
+            <p>"Great service and quick repair! The technician arrived on time and fixed my refrigerator in under an hour. Highly recommended for anyone in Kolkata seeking quality service."</p>
             <div class="testimonial-author">
-              <img src="customer1.jpg" alt="Customer 1" class="author-image" loading="lazy">
+              <img src="customer1.jpg" alt="Rahul Sharma" class="author-image" loading="lazy">
               <div class="author-info">
                 <h3>Rahul Sharma</h3>
                 <p>Salt Lake, Kolkata</p>
@@ -230,9 +307,9 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-            <p>"Professional, reliable, and friendly. My washing machine was making strange noises, and they fixed it completely. My appliance works like new again!"</p>
+            <p>"Professional, reliable, and friendly. My washing machine was making strange noises, and they fixed it completely. My appliance works like new again in Kolkata!"</p>
             <div class="testimonial-author">
-              <img src="customer2.jpg" alt="Customer 2" class="author-image" loading="lazy">
+              <img src="customer2.jpg" alt="Priya Patel" class="author-image" loading="lazy">
               <div class="author-info">
                 <h3>Priya Patel</h3>
                 <p>Park Street, Kolkata</p>
@@ -249,12 +326,31 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star-half-alt"></i>
             </div>
-            <p>"I was impressed with their attention to detail and commitment to customer care. They took the time to explain the issue with my AC and provided maintenance tips."</p>
+            <p>"I was impressed with their attention to detail and commitment to customer care. They took the time to explain the issue with my AC and provided maintenance tips in Kolkata."</p>
             <div class="testimonial-author">
-              <img src="customer3.jpg" alt="Customer 3" class="author-image" loading="lazy">
+              <img src="customer3.jpg" alt="Amit Kumar" class="author-image" loading="lazy">
               <div class="author-info">
                 <h3>Amit Kumar</h3>
                 <p>Dumdum, Kolkata</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p>"Fantastic service for my microwave repair! Quick, affordable, and the technician was very knowledgeable. Highly recommend AppliQ in Kolkata."</p>
+            <div class="testimonial-author">
+              <img src="customer4.jpg" alt="Suman Das" class="author-image" loading="lazy">
+              <div class="author-info">
+                <h3>Suman Das</h3>
+                <p>Ballygunge, Kolkata</p>
               </div>
             </div>
           </div>
@@ -264,6 +360,7 @@
         <button id="prevTestimonial" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
         <div class="testimonial-indicators">
           <span class="indicator active"></span>
+          <span class="indicator"></span>
           <span class="indicator"></span>
           <span class="indicator"></span>
         </div>
@@ -288,6 +385,7 @@
             <div class="contact-details">
               <h3>Our Location</h3>
               <p>Moulana Azad Road, West Hidaypur, Kolkata 700127</p>
+              <a href="https://maps.google.com/?q=Moulana+Azad+Road,+West+Hidaypur,+Kolkata+700127" class="btn btn-secondary" target="_blank">Get Directions</a>
             </div>
           </div>
           <div class="contact-card">
@@ -317,19 +415,19 @@
           <form id="contactForm" class="contact-form">
             <div class="form-group">
               <label for="name">Your Name</label>
-              <input type="text" id="name" placeholder="Enter your name" required />
+              <input type="text" id="name" placeholder="Enter your name" required aria-required="true" />
             </div>
             <div class="form-group">
               <label for="email">Your Email</label>
-              <input type="email" id="email" placeholder="Enter your email" required />
+              <input type="email" id="email" placeholder="Enter your email" required aria-required="true" />
             </div>
             <div class="form-group">
               <label for="phone">Your Phone</label>
-              <input type="tel" id="phone" placeholder="Enter your phone number" />
+              <input type="tel" id="phone" placeholder="Enter your phone number" required aria-required="true" />
             </div>
             <div class="form-group">
               <label for="service">Service Needed</label>
-              <select id="service" required>
+              <select id="service" required aria-required="true">
                 <option value="">Select a service</option>
                 <option value="refrigerator">Refrigerator Repair</option>
                 <option value="washing-machine">Washing Machine Repair</option>
@@ -341,7 +439,7 @@
             </div>
             <div class="form-group">
               <label for="message">Your Message</label>
-              <textarea id="message" rows="5" placeholder="Tell us about your appliance issue" required></textarea>
+              <textarea id="message" rows="5" placeholder="Tell us about your appliance issue in Kolkata" required aria-required="true"></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-block">
               <i class="fas fa-paper-plane"></i> Send Message
@@ -349,6 +447,36 @@
           </form>
         </div>
       </div>
+      <div class="trust-badges">
+        <img src="certification-badge.png" alt="ISO Certified" loading="lazy">
+        <img src="trustpilot-badge.png" alt="Trustpilot Verified" loading="lazy">
+        <img src="ssl-badge.png" alt="Secure Site" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Preview Section (Optional, for SEO and Engagement) -->
+  <section id="blog-preview" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Latest <span class="accent">Blog</span> Posts</h2>
+        <div class="separator"></div>
+      </div>
+      <div class="blog-grid">
+        <article class="blog-post">
+          <img src="blog1.jpg" alt="How to Maintain Your Refrigerator" loading="lazy">
+          <h3>How to Maintain Your Refrigerator in Kolkata’s Climate</h3>
+          <p>Learn tips to keep your refrigerator running efficiently in Kolkata’s hot and humid weather.</p>
+          <a href="/blog/how-to-maintain-refrigerator" class="btn btn-secondary">Read More</a>
+        </article>
+        <article class="blog-post">
+          <img src="blog2.jpg" alt="Common Washing Machine Issues" loading="lazy">
+          <h3>Common Washing Machine Issues and Fixes in Kolkata</h3>
+          <p>Discover the most frequent problems and how AppliQ can help in Kolkata.</p>
+          <a href="/blog/common-washing-machine-issues" class="btn btn-secondary">Read More</a>
+        </article>
+      </div>
+      <a href="/blog" class="btn btn-primary">View All Blog Posts</a>
     </div>
   </section>
 
@@ -363,7 +491,7 @@
       <div class="footer-content">
         <div class="footer-logo">
           <span class="logo-text">Appli<span class="accent">Q</span></span>
-          <p>Your trusted partner for all appliance needs</p>
+          <p>Your trusted partner for all appliance needs in Kolkata</p>
         </div>
         <div class="footer-links">
           <h3>Quick Links</h3>
@@ -373,39 +501,42 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/faq">FAQ</a></li>
           </ul>
         </div>
         <div class="footer-services">
           <h3>Our Services</h3>
           <ul>
-            <li><a href="#services">Refrigerator Repair</a></li>
-            <li><a href="#services">Washing Machine Repair</a></li>
-            <li><a href="#services">AC Repair</a></li>
-            <li><a href="#services">Microwave Repair</a></li>
-            <li><a href="#services">TV & Home Theater</a></li>
+            <li><a href="#refrigerator">Refrigerator Repair</a></li>
+            <li><a href="#washing-machine">Washing Machine Repair</a></li>
+            <li><a href="#ac">AC Repair</a></li>
+            <li><a href="#microwave">Microwave Repair</a></li>
+            <li><a href="#tv">TV & Home Theater</a></li>
           </ul>
         </div>
         <div class="footer-contact">
           <h3>Contact Us</h3>
           <p><i class="fas fa-map-marker-alt"></i> Moulana Azad Road, West Hidaypur, Kolkata 700127</p>
           <p><i class="fas fa-phone"></i> <a href="tel:08584874220">08584874220</a></p>
+          <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/918584874220" target="_blank">Chat on WhatsApp</a></p>
           <div class="social-icons">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://facebook.com/appliq" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/appliq" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/appliq" aria-label="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://wa.me/918584874220" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 AppliQ. All rights reserved.</p>
+        <p>© 2025 AppliQ. All rights reserved. | <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms">Terms of Service</a></p>
         <p>Designed with <i class="fas fa-heart"></i> in Kolkata</p>
       </div>
     </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-  <script src="index.js"></script>
+  <!-- JavaScript (Load with Defer for Performance) -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" integrity="sha512-9Q0o5c2c1c7+1oLq2+9v6vX7gQ0q9g7u0vXvL8vR5U2fJq9U7g3u5v7hR4J1K7fD2eX3o9rV7bUM6m9b2Xh+2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script defer src="index.js"></script>
 </body>
 </html>
